@@ -1,0 +1,294 @@
+/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #hero {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    /* Centers button */
+    text-align: center;
+    padding-bottom: 1.25rem;
+    position: relative;
+    z-index: 1;
+    /* prevents overflow from the lines extending past the screen width */
+    overflow: hidden;
+  }
+  #hero .cs-picture {
+    /* Background Image */
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    filter: brightness(0.4);
+  }
+  #hero .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes image act like a background-image */
+    object-fit: cover;
+  }
+  #hero .cs-container {
+    width: 100%;
+    max-width: 80em;
+    /* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
+    /* 144px - 280px - leaving extra space for the navigation */
+    /* changes on tablet */
+    padding: clamp(9em, 25.95vw, 17.5em) 0;
+    margin: auto;
+    position: relative;
+  }
+  #hero .cs-flex-group {
+    /* 60px - 220px */
+    margin-bottom: clamp(3.75em, 15.5vw, 13.75em);
+    margin: auto;
+    width: 80vw;
+    /* 464px - 562px */
+    max-width: clamp(29em, 60vw, 35.125em);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  #hero .cs-topper {
+    /* 13px - 16px */
+    font-size: clamp(0.8125rem, 1.6vw, 1rem);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  #hero .cs-title {
+    /* 39px - 61px */
+    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: center;
+    width: 100%;
+    /* 32px - 40px */
+    margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+    text-transform: uppercase;
+  }
+  #hero .cs-text {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 1.95vw, 1.25rem);
+    line-height: 1.5em;
+    text-align: center;
+    width: 100%;
+    /* 32px - 40px */
+    margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+    /* 40px - 48px */
+    margin-bottom: clamp(2.5rem, 4vw, 3rem);
+    color: var(--bodyTextColorWhite);
+  }
+
+  #hero .btn {
+    border-radius: 5px;
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    background-size: 300%;
+    transition: all 0.6s;
+line-height: clamp(2.875em, 5.5vw, 3.5em);
+width: 11.25rem;
+text-decoration: none;
+font-weight: 700;
+margin: 0 0.5rem 1rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+display: inline-block;
+padding: 0;
+  }
+  #hero .orange {
+    color: orange;
+    background-image: linear-gradient(120deg, white 50%, orange 50%);
+}
+#hero .btn:hover {
+  color: #fff;
+  background-position: 100%;
+  transform: translateX(0.5rem);
+}
+
+#hero .btn:active {
+  transform: translate(0.5rem, 0.5rem);
+  box-shadow: 0px 10px 20px -15px rgba(0, 0, 0, 0.75);
+}
+
+#hero .hero-svg-1 {
+  display: none;
+}
+#hero .hero-svg-2 {
+  position:relative;
+  top: 25px;
+}
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48em) {
+  #hero .cs-container {
+    padding: clamp(7em, 27.95vw, 17.5em) 0 clamp(9em, 30.95vw, 23.5em) 0;
+  }
+}
+/* Desktop Parallax Effect - 1300px */
+@media only screen and (min-width: 81.25em) {
+  #hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), repeating-linear-gradient(135deg, rgb(240,142,0) 0px, rgb(240,142,0) 105px,rgb(255,176,100) 105px, rgb(255,176,100) 210px,rgb(255,162,49) 210px, rgb(255,162,49) 315px,rgb(255,183,88) 315px, rgb(255,183,88) 420px,rgb(255,167,79) 420px, rgb(255,167,79) 525px,rgb(255,157,33) 525px, rgb(255,157,33) 630px,rgb(255,179,70) 630px, rgb(255,179,70) 735px,rgb(255,159,0) 735px, rgb(255,159,0) 840px);
+    background-position: center;
+    background-repeat: no-repeat;
+    /* creates parallax effect on background image */
+    background-attachment: fixed;
+    /* remove img tag so we can make parallax work */
+    padding: 0;
+  }
+  #hero .cs-picture img {
+   display: none;
+  }
+}
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #sbs {
+    padding: var(--sectionPadding);
+  }
+  #sbs .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    row-gap: 2.5rem;
+  }
+  #sbs .cs-left {
+    /* scaling the font size with the view width */
+    font-size: min(2.31vw, .7em);
+    /* using ems so we can use font size to scale the whole section */
+    width: 39.4375em;
+    height: 39.75em;
+    position: relative;
+  }
+  #sbs .cs-picture {
+    border-radius: 1.5em;
+    /* clips img tag corners */
+    overflow: hidden;
+    position: absolute;
+    display: block;
+  }
+  #sbs .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* makes image act like a background image */
+    object-fit: cover;
+  }
+  #sbs .cs-picture1 {
+    width: 32.625em;
+    height: 36.3125em;
+    left: 0;
+    top: 0;
+  }
+  #sbs .cs-picture2 {
+    width: 25.875em;
+    height: 25em;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
+    /* 6px - 12px */
+    border: clamp(0.375em, 1.5vw, 0.75em) solid #ffffff;
+    right: 0;
+    bottom: 0;
+  }
+  #sbs .cs-right {
+    margin: auto;
+    max-width: 33.875rem;
+  }
+  #sbs .cs-topper {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-family: Alpino, sans-serif;
+    color: #d69e3d;
+    line-height: 1.111em;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  #sbs .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: left;
+    max-width: 50rem;
+    margin: 0 auto 1rem;
+    color: black;
+    position: relative;
+    text-transform: uppercase;
+  }
+  #sbs .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: left;
+    width: 100%;
+    max-width: 46.875rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    color: var(--bodyTextColor);
+  }
+  #sbs .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbs .cs-flex-group {
+    /* 16px - 32px */
+    position: relative;
+  }
+  #sbs .cs-name {
+    font-size: 1rem;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 0 0.25rem;
+    color: var(--headerColor);
+    display: block;
+  }
+  #sbs .cs-job {
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    color: #767676;
+    display: block;
+  }
+  #sbs .btn {
+    margin-top: 2rem;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64em) {
+  #sbs .cs-container {
+    flex-flow: row;
+    justify-content: space-between;
+    gap: 3.25rem;
+  }
+  #sbs .cs-left {
+    font-size: min(1.2vw, 1em);
+    flex: none;
+  }
+  #sbs .cs-right {
+    margin: 0;
+  }
+}
