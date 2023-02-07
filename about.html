@@ -4,23 +4,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Swap our for actual link-->
     <link rel="canonical" href="https://www.website.com/about/">
 
     <meta name="description" content="Meta description for the page">
     <meta name="keywords" content="">
 
-    <!--Social Media Display-->
     <meta property="og:title" content="Title that shows up on google searches">
     <meta property="og:description" content="Meta description for the page">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.website.com/about/">
     <meta property="og:image" content="/images/social.jpg">
     <meta property="og:image:secure_url" content="/images/social.jpg">
-
-    <!--Favicons-->
-
-
 
 
     <link rel="stylesheet" href="root.css">
@@ -33,7 +27,7 @@
     <title>About CookieShop</title>
 </head>
 <body class="">
-    <!--Screen reader skip main nav-->
+
     <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
 
     <!-- ============================================ -->
@@ -54,7 +48,7 @@
    
 
     <!--Mobile Nav toggle-->
-    <button class="hamburger-menu" aria-expanded="false" aria-controls="navbar-menu">
+    <button aria-label="navigation toggle" class="hamburger-menu" aria-expanded="false" aria-controls="navbar-menu">
         <span aria-hidden="true"></span>
     </button>
 
@@ -176,19 +170,14 @@
 
     <div class="credit">
         <span>Designed and Hand Coded by</span>
-        <a href="" target="_blank" rel="noopener">SheffieldWebDesigns</a>
-        <span class="copyright"> Copyright 2023 - Present</span>
+        <a href="" target="_blank" rel="noopener">Manuka Web Designs</a>
+        <span class="copyright"> Copyright 2022 - Present</span>
     </div>
 </footer>
 
 <script defer="" src="nav-js.js"></script>
 <script defer="" src=""></script>
 
-<!--
-    This script adds a class to the body after scrolling 100px
-    and we used these body.scroll styles to create some on scroll 
-    animations with the navbar
--->
 <script defer="">
     document.addEventListener('scroll', (e) => { 
         const scroll = document.documentElement.scrollTop;
